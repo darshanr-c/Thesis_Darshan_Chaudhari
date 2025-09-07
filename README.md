@@ -19,7 +19,6 @@ The goal of this project is to **automatically generate factually accurate, cohe
 ## 📂 Repository Structure
 
 ```
-.
 ├─ notebooks/
 │  └─ thesis_colab.ipynb        # End-to-end Colab demo of the pipeline
 ├─ scripts/                      # Core pipeline scripts
@@ -151,7 +150,7 @@ notebooks/thesis_colab.ipynb
 
 ## 🙌 Acknowledgements
 
-Thanks to my supervisors and peers for guidance and feedback throughout this thesis.
+Thanks to my supervisors for guidance and feedback throughout this thesis.
 
 ---
 
