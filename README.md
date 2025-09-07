@@ -73,8 +73,7 @@ The goal of this project is to **automatically generate factually accurate, conc
 - **Models:** LLaMA (LoRA/QLoRA fine-tuning)
 - **Evaluation:** ROUGE, BERTScore, rule-based factual checks
 - **MLOps:** Config-driven pipeline, experiment tracking
-- **Visualization & Analysis:** Colab, Power BI
-- **Cloud:** AWS (optional)
+- **Visualization & Analysis:** Colab
 
 ---
 
