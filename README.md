@@ -3,7 +3,7 @@
 This repository hosts the full pipeline for my **Master’s Thesis in Data Science**:  
 **“A Comprehensive Study of Automated Generation of Cricket Match Summaries Using Large Language Models.”**
 
-The goal of this project is to **automatically generate factually accurate, coherent, and human-like post-match cricket summaries** from raw ball-by-ball commentary.
+The goal of this project is to **automatically generate factually accurate, concise and human-like post-match cricket summaries** from raw ball-by-ball commentary.
 
 ---
 
@@ -12,7 +12,8 @@ The goal of this project is to **automatically generate factually accurate, cohe
 - Cricket generates **massive volumes of ball-by-ball commentary**, which is too detailed for most fans.
 - Manual post-match reports are **time-consuming** and vary in quality.
 - Advances in **Large Language Models (LLMs)** enable concise, structured narratives from unstructured text.
-- This work shows how **LLMs can be fine-tuned and guided** to produce reliable sports summaries—useful for fans and platforms.
+- This work shows how **LLMs can be fine-tuned and guided** to produce reliable sports summaries—useful for fans.
+- Fans can have a **summary of the match** with what actually happened, instead of boring **static scorecard numbers** and **commentary text**.
 
 ---
 
@@ -59,8 +60,8 @@ The goal of this project is to **automatically generate factually accurate, cohe
 ## 📊 Key Results
 
 - **ROUGE-L:** improved from *0.18 → 0.26*  
-- **BERTScore (F1):** ~0.78  
-- **Factual Accuracy:** >95% (winner, margin, top performers)
+- **BERT Score / F1 Score:** ~ 0.78  
+- **Factual Accuracy:** > 95% (winner, loser, winning margin, top performers)
 
 ➡️ These results place the system within the **“acceptable benchmark range”** for abstractive summarization and validate it as a **proof-of-concept**.
 
@@ -106,7 +107,7 @@ python scripts/05_Evaluate_summary.py --pred outputs/preds.jsonl --ref data_proc
 ### 3) Notebook (end-to-end)
 Open:
 ```
-notebooks/thesis_colab.ipynb
+notebooks/LLM_Summarization.ipynb
 ```
 
 ---
@@ -142,9 +143,9 @@ notebooks/thesis_colab.ipynb
   - 0.76–0.83 = good/publishable  
   - 0.85+ = very strong
 - **Factual Accuracy:**  
-  - Winner/loser/venue/margin = 100% expected  
+  - Winner/loser/venue/winning margin = 100% expected  
   - Toss/key performers: omissions allowed, no contradictions  
-  - ≥90% = reliable
+  - ≥ 90% = reliable
 
 ---
 
