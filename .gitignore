@@ -1,0 +1,11 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python build junk
+__pycache__/
+*.pyc
+
+# OS/editor
+.DS_Store.venv/
+venv/

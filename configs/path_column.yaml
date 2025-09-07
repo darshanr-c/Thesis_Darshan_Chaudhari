@@ -1,0 +1,33 @@
+paths:
+  # Raw inputs
+  raw_excel: "data_raw/IPL24_All_Matches_Dataset.xlsx"
+  deliveries_csv: "data_raw/deliveries.csv"
+  matches_csv: "data_raw/matches.csv"
+
+  # Intermediate data
+  commentary_parquet: "data_intermediate/commentary_per_match.parquet"
+  scorecards_parquet: "data_intermediate/scorecards_per_match.parquet"
+
+  # Final processed data
+  commentary_jsonl: "data_processed/commentary.jsonl"
+  scorecards_jsonl: "data_processed/scorecards.jsonl"
+  reports_jsonl: "data_processed/reports.jsonl"      # manually created summaries for model training
+  manifest_jsonl: "data_processed/train_manifest.jsonl"
+
+keys:
+  match_id_in_matches: "id"          # matches.csv primary key
+  match_id_in_deliveries: "match_id" # deliveries.csv foreign key
+  match_id_xlsx: "matchID"            # Excel commentary match ID
+
+commentary_columns:
+  innings: "inningID"     # Excel column for innings number
+  over: "over"            # Excel column for over number
+  ball: "batsmanBall"     # Excel column for ball number (adjust if different)
+  text: "commentary"      # Excel column containing commentary text
+
+chunking:
+  max_words: 600
+  overlap_words: 80
+
+training:
+  max_context_chars: 60000
